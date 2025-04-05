@@ -18,7 +18,6 @@ class MarcaFactory extends Factory
     {
         
             $marcasCamiones = ['Volvo', 'Mercedes-Benz', 'Scania', 'MAN', 'DAF', 'Iveco', 'Kenworth', 'Freightliner', 'Peterbilt', 'Mack'];
-        
             return [
                 'descripcion' => $this->faker->randomElement($marcasCamiones),
         ];

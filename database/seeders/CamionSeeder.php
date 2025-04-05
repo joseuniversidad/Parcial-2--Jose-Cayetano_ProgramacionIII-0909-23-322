@@ -9,20 +9,24 @@ use Illuminate\Database\Seeder;
 
 class CamionSeeder extends Seeder
 {
-    public function run(): void
+    public function run()
     {
+
         $marcas = Marca::all();
         $transportes = Transporte::all();
+        
 
-        if ($marcas->isEmpty() || $transportes->isEmpty()) {
+        if($marcas->isEmpty() || $transportes->isEmpty()) {
             return;
         }
-
+        
+        
         for ($i = 0; $i < 20; $i++) {
-            Camion::Factory()->count(1000)->create([
-                'id_marca' => $marcas->random()->id_marca,
-                'id_transporte' => $transportes->random()->id_transporte,
-            ]);
+            Camion::factory()
+                ->create([
+                    'id_marca' => $marcas->random()->id_marca,
+                    'id_transporte' => $transportes->random()->id_transporte,
+                ]);
         }
     }
 }

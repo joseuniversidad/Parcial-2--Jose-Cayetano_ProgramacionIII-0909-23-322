@@ -10,6 +10,7 @@ class Transporte extends Model
     use HasFactory;
 
     protected $table = 'transportes';
+    protected $primaryKey = 'id_transporte';
 
     protected $fillable = ['codigo', 'nombre', 'razon_social'];
 
