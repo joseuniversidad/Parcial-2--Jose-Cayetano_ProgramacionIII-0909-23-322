@@ -18,6 +18,7 @@
                     <th scope="col">Codigo</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Razon Social</th>
+                    <th scope="col">Accciones</th>
                 </tr>
                 </thead>
                 <tbody>

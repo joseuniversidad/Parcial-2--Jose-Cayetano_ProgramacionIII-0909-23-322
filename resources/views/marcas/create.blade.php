@@ -9,7 +9,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-4 text-center bg-white p-4 rounded shadow" style="margin-top: 150px;">
             <label for="descripcion">Nombre</label>
-            <input type="text" name="descripcion" class="w3-input w3-border w3-round-xxlarge" placeholder="Descrippcion de la marca" required>
+            <input type="text" name="descripcion" class="w3-input w3-border w3-round-xxlarge" placeholder="Descripcion de la marca" required>
             <br>
 
             <button type="submit" value="Agregar" class="btn btn-primary" style="margin-top:15px;">Agregar</button>

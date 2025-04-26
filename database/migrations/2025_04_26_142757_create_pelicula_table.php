@@ -13,14 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transportes', function (Blueprint $table) {
-            $table->id('id_transporte');
-            $table->string('codigo', 45);
-            $table->string('nombre', 125);
-            $table->string('razon_social', 175);
+        Schema::create('pelicula', function (Blueprint $table) {
+            $table->id();
+            $table->string('titulo', 1000);
+            $table->string('genero', 1000);
+            $table->string('puntuacion', 1000);
+            $table->string('actor_principal', 1000);
+            $table->string('actor_secundario', 1000);
+            $table->date('fecha_publicacion');
             $table->timestamps();
         });
-        
     }
 
     /**
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transportes');
+        Schema::dropIfExists('pelicula');
     }
 };

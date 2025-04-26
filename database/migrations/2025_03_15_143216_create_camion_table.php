@@ -17,13 +17,15 @@ return new class extends Migration
             $table->id('id_camion');
             $table->string('placa', 8);
             $table->string('codig_interno', 8);
-            $table->foreignId('id_transporte')->constrained('transportes')->onDelete('cascade');
+            $table->foreignId('id_transporte')->constrained('transportes', 'id_transporte')->onDelete('cascade');
             $table->string('color', 35);
             $table->date('modelo');
             $table->string('capacidad_toneladas', 45);
             $table->timestamps();
-            $table->foreignId('id_marca')->constrained('marca')->onDelete('cascade');;
+            // Aquí especificamos 'id_marca' como clave foránea que hace referencia a la columna 'id_marca' en la tabla 'marca'
+            $table->foreignId('id_marca')->constrained('marca', 'id_marca')->onDelete('cascade');
         });
+        
     }
 
     /**

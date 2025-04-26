@@ -21,7 +21,7 @@
                     <th scope="col">Color</th>
                     <th scope="col">Modelo</th>
                     <th scope="col">Capacidad Toneladas</th>
-                    <th scope="col">ID Marca</th>
+                    <th scope="col">Marca</th>
                     <th scope="col" class="text-center">Acciones</th>
                 </tr>
             </thead>
@@ -35,7 +35,7 @@
                         <td>{{ $camion->color}}</td>
                         <td>{{ $camion->modelo }}</td>
                         <td>{{ $camion->capacidad_toneladas }}</td> 
-                        <td>{{ $camion->marca?->id_marca}}</td> 
+                        <td>{{ $camion->marca?->descripcion}}</td> 
                         <td>
                             <a href="{{ route('camiones.edit', $camion->id_camion) }}" class="btn btn-sm btn-warning">
                                 <i class="fas fa-edit"></i> Editar
