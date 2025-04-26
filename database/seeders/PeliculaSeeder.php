@@ -18,10 +18,8 @@ class PeliculaSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        if (Pelicula::count() > 0) {
-            return;
-        }
-
+        Pelicula::truncate(); // <<--- borra todo antes
+    
         $nombresPeliculas = [
             'Pelicula 1',
             'Pelicula 2',
@@ -34,7 +32,7 @@ class PeliculaSeeder extends Seeder
             'Pelicula 9',
             'Pelicula 10'
         ];  
-
+    
         for ($i = 0; $i < 20; $i++) {
             Pelicula::create([
                 'titulo' => $faker->randomElement($nombresPeliculas),
@@ -47,7 +45,7 @@ class PeliculaSeeder extends Seeder
                 'updated_at' => now(),
             ]);
         }
-        Pelicula::factory()->count(10)->create();
         
+        Pelicula::factory()->count(10)->create();
     }
 }

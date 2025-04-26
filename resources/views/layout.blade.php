@@ -51,6 +51,11 @@
                             <a class="dropdown-item" href="{{ route('transportes.index') }}">
                                 <i class="fas fa-shopping-cart"></i> Transporte
                          </a></li>
+                         <li>
+                            <a class="dropdown-item" href="{{ route('peliculas.index') }}">
+                                <i class="fas fa-shopping-cart"></i> Peliculas
+                         </a></li>
+                         </li>
                          
                     </ul>
                 </li>
